@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Links</h1>
+
+<p *ngIf="!links"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="links">
+  <thead>
+    <tr>
+      <th>Long Url</th>
+      <th>Short Url</th>
+      <th>Created Date</th>
+      <th>Modified Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let link of links">
+      <td>{{ link.longUrl }}</td>
+      <td>{{ link.shortUrl }}</td>
+      <td>{{ link.createdDate | date: 'M/d/yy, h:mm a' }}</td>
+      <td>{{ link.modifiedDate | date: 'M/d/yy, h:mm a' }}</td>
+    </tr>
+  </tbody>
+</table>

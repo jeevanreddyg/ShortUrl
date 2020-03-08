@@ -1,0 +1,13 @@
+<h1 id="tableLabel">URL Shortener, Custom Links & Link Management</h1>
+
+<p>Paste the link to generate short link</p>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input type="text" name="name" [(ngModel)]="link.longUrl" />
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+  <div class="form-group">
+    <label>{{link.shortUrl}}</label>
+   </div>
+</form>
